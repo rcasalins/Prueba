@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #C8E4B2, #9ED2BE);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap on small screens */
+}
+
+.left-half {
+    width: 100%; /* Full width on small screens */
+    background-color: linear-gradient(to bottom, #C8E4B2, #9ED2BE);
+    padding: 2rem;
+}
+
+.right-half {
+    width: 100%; /* Full width on small screens */
+    background-color: linear-gradient(to bottom, #C8E4B2, #9ED2BE);
+    padding: 2rem;
+}
+
+/* .hello-box {
+    text-align: center;
+} */
+
+.hello-box {
+  width: 100px;
+  height: 100px;
+  background: slateblue;
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  color: white;
+  text-align: center;
+}
+
+@keyframes drop-in {
+  from {
+    transform:
+      rotate(-30deg) translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform:
+      rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
+
+.hello-box {
+  animation: drop-in 1000ms;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Keyframe animation */
+@keyframes colorChange {
+    from {
+        background-color: #4CAF50;
+    }
+    to {
+        background-color: #333;
+    }
+}
+
+button#aboutButton {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    animation: colorChange 1s infinite alternate;
+}
+
+button#aboutButton:hover {
+    animation-play-state: paused;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    .content {
+        flex-direction: row; /* Revert to side-by-side layout on larger screens */
+    }
+    .left-half {
+        width: 50%;
+    }
+    .right-half {
+        width: 50%;
+    }
+}
